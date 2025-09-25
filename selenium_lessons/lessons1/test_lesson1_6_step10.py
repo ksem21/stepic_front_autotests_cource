@@ -4,10 +4,9 @@ from selenium.webdriver.common.by import By
 import time
 
 
-def test_lesson1_1_step10():
+def test_lesson1_1_step10(browser):
     try:
         link = "http://suninjuly.github.io/registration1.html"
-        browser = webdriver.Chrome()
         browser.get(link)
 
         input1 = browser.find_element(By.XPATH, "//input[@placeholder='Input your first name']")
@@ -37,4 +36,3 @@ def test_lesson1_1_step10():
         # ожидание чтобы визуально оценить результаты прохождения скрипта
         time.sleep(7)
         # закрываем браузер после всех манипуляций
-    browser.quit()

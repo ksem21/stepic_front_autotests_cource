@@ -2,12 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 
-
-def test_lesson1_1_step4():
+def test_lesson1_1_step4(browser):
     link = "http://suninjuly.github.io/simple_form_find_task.html"
 
     try:
-        browser = webdriver.Chrome()
         browser.get(link)
 
         input1 = browser.find_element(By.TAG_NAME, "input")
@@ -25,4 +23,3 @@ def test_lesson1_1_step4():
         # успеваем скопировать код за 30 секунд
         time.sleep(7)
         # закрываем браузер после всех манипуляций
-    browser.quit()

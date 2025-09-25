@@ -3,10 +3,9 @@ from selenium.webdriver.common.by import By
 import time
 
 
-def test_lesson1_1_step11():
+def test_lesson1_1_step11(browser):
     try:
-        link = "https://suninjuly.github.io/registration2.html"
-        browser = webdriver.Chrome()
+        link = "https://suninjuly.github.io/registration1.html"
         browser.implicitly_wait(5)
         browser.get(link)
 
@@ -40,4 +39,3 @@ def test_lesson1_1_step11():
         # ожидание чтобы визуально оценить результаты прохождения скрипта
         time.sleep(7)
         # закрываем браузер после всех манипуляций
-    browser.quit()

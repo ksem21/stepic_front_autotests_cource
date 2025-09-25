@@ -7,8 +7,7 @@ from selenium.webdriver.support import expected_conditions
 import math
 
 
-def test_lesson2_6_step8():
-    browser = webdriver.Chrome()
+def test_lesson2_6_step8(browser):
     browser.implicitly_wait(5)
 
     browser.get("http://suninjuly.github.io/explicit_wait2.html")
@@ -27,4 +26,3 @@ def test_lesson2_6_step8():
     browser.find_element(By.XPATH, "//input[@id='answer']").send_keys(y)
     browser.find_element(By.XPATH, "//button[@type='submit']").click()
     time.sleep(7)
-    browser.quit()

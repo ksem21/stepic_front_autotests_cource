@@ -4,11 +4,10 @@ from selenium.webdriver.common.by import By
 import math
 
 
-def test_lesson2_1_step5():
+def test_lesson2_1_step5(browser):
     def calc(x):
         return str(math.log(abs(12 * math.sin(int(x)))))
 
-    browser = webdriver.Chrome()
     browser.implicitly_wait(5)
 
     browser.get("https://suninjuly.github.io/math.html")
@@ -31,4 +30,3 @@ def test_lesson2_1_step5():
     enter_button = browser.find_element(By.XPATH, "//button[@class='btn btn-default']")
     enter_button.click()
     time.sleep(7)
-    browser.quit()

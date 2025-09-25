@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 import time
 
 
-def test_lesson1_1_step7():
+def test_lesson1_1_step7(browser):
     try:
         browser = webdriver.Chrome()
         browser.get("http://suninjuly.github.io/huge_form.html")
@@ -18,4 +18,3 @@ def test_lesson1_1_step7():
         # успеваем скопировать код за 30 секунд
         time.sleep(7)
         # закрываем браузер после всех манипуляций
-    browser.quit()

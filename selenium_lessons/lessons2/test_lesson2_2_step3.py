@@ -3,8 +3,7 @@ from selenium.webdriver.common.by import By
 import time
 
 
-def test_lesson2_2_step3():
-    browser = webdriver.Chrome()
+def test_lesson2_2_step3(browser):
     browser.implicitly_wait(5)
 
     browser.get("http://suninjuly.github.io/selects1.html")
@@ -18,4 +17,3 @@ def test_lesson2_2_step3():
     browser.find_element(By.XPATH, f"//option[@value='{result}']").click()
     browser.find_element(By.XPATH, "//button[@type='submit']").click()
     time.sleep(7)
-    browser.quit()

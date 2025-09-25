@@ -4,8 +4,7 @@ import time
 import os
 
 
-def test_lesson2_2_step8():
-    browser = webdriver.Chrome()
+def test_lesson2_2_step8(browser):
     browser.implicitly_wait(5)
 
     browser.get("https://suninjuly.github.io/file_input.html")
@@ -19,4 +18,3 @@ def test_lesson2_2_step8():
     browser.find_element(By.XPATH, "//input[@type='file']").send_keys(file_path)
     browser.find_element(By.XPATH, "//button[@type='submit']").click()
     time.sleep(7)
-    browser.quit()

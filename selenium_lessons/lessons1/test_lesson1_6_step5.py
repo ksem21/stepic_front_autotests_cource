@@ -4,11 +4,10 @@ import time
 import math
 
 
-def test_lesson1_1_step5():
+def test_lesson1_1_step5(browser):
     a = str(math.ceil(math.pow(math.pi, math.e) * 10000))
 
     try:
-        browser = webdriver.Chrome()
         browser.get("http://suninjuly.github.io/find_link_text")
 
         secret_link = browser.find_element(By.LINK_TEXT, a)
@@ -27,4 +26,3 @@ def test_lesson1_1_step5():
 
     finally:
         time.sleep(7)
-    browser.quit()

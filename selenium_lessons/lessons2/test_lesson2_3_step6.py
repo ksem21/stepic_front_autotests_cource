@@ -3,8 +3,7 @@ from selenium.webdriver.common.by import By
 import time
 import math
 
-def test_lesson2_3_step6():
-    browser = webdriver.Chrome()
+def test_lesson2_3_step6(browser):
     browser.implicitly_wait(5)
 
     browser.get("https://suninjuly.github.io/redirect_accept.html")
@@ -26,4 +25,3 @@ def test_lesson2_3_step6():
     browser.find_element(By.XPATH, "//input[@id='answer']").send_keys(y)
     browser.find_element(By.XPATH, "//button[@type='submit']").click()
     time.sleep(3)
-    browser.quit()

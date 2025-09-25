@@ -4,8 +4,7 @@ import time
 import math
 
 
-def test_lesson2_3_step4():
-    browser = webdriver.Chrome()
+def test_lesson2_3_step4(browser):
     browser.implicitly_wait(5)
 
     browser.get("https://suninjuly.github.io/alert_accept.html")

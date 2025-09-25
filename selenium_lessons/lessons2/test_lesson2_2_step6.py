@@ -4,8 +4,7 @@ import time
 import math
 
 
-def test_lesson2_2_step6():
-    browser = webdriver.Chrome()
+def test_lesson2_2_step6(browser):
     browser.implicitly_wait(5)
 
     def calc(x):
@@ -25,4 +24,3 @@ def test_lesson2_2_step6():
     browser.find_element(By.XPATH, "//input[@id='robotsRule']").click()
     browser.find_element(By.XPATH, "//button[@type='submit']").click()
     time.sleep(7)
-    browser.quit()
