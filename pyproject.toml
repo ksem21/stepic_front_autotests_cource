@@ -7,4 +7,5 @@ addopts = ["-v", "--tb=short"] #-v (verbose — подробный вывод) -
 markers = """
 lesson1: marker for first lesson
 lesson2: marker for second lesson
+lesson3: marker for third lesson
 """

@@ -1,9 +1,10 @@
+import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 import unittest
 
-
+@pytest.mark.lesson3
 class TestAbs(unittest.TestCase):
     def test_lesson3_2_step13(self):
         link = "http://suninjuly.github.io/registration1.html"
