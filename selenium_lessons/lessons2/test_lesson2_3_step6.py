@@ -2,7 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 import math
+import pytest
 
+
+@pytest.mark.lesson2
 def test_lesson2_3_step6(browser):
     browser.implicitly_wait(5)
 
@@ -14,10 +17,8 @@ def test_lesson2_3_step6(browser):
 
     browser.switch_to.window(second_window)
 
-
     def calc(x):
         return str(math.log(abs(12 * math.sin(int(x)))))
-
 
     x_value = browser.find_element(By.XPATH, "//span[@id='input_value']").text
     y = calc(x_value)

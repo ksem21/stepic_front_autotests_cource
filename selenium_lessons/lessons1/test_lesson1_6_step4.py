@@ -1,7 +1,9 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
+import pytest
 
+@pytest.mark.lesson1
 def test_lesson1_1_step4(browser):
     link = "http://suninjuly.github.io/simple_form_find_task.html"
 

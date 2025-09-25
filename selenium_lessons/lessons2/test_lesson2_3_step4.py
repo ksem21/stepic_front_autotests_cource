@@ -2,8 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 import math
+import pytest
 
 
+@pytest.mark.lesson2
 def test_lesson2_3_step4(browser):
     browser.implicitly_wait(5)
 

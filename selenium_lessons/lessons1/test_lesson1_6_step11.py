@@ -1,11 +1,14 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
+import pytest
 
 
+@pytest.mark.lesson1
+@pytest.mark.xfail(reason="Тест проверяет уникальность локаторов и должен падать")
 def test_lesson1_1_step11(browser):
     try:
-        link = "https://suninjuly.github.io/registration1.html"
+        link = "https://suninjuly.github.io/registration2.html"
         browser.implicitly_wait(5)
         browser.get(link)
 

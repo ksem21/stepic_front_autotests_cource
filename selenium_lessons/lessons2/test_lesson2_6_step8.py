@@ -1,12 +1,13 @@
 import time
 
+import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 import math
 
-
+@pytest.mark.lesson2
 def test_lesson2_6_step8(browser):
     browser.implicitly_wait(5)
 

@@ -2,8 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 import math
+import pytest
 
 
+@pytest.mark.lesson2
 def test_lesson2_1_step7(browser):
     def calc(x):
         return str(math.log(abs(12 * math.sin(int(x)))))

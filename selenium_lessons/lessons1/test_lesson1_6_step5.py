@@ -2,7 +2,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 import math
+import pytest
 
+@pytest.mark.lesson1
 
 def test_lesson1_1_step5(browser):
     a = str(math.ceil(math.pow(math.pi, math.e) * 10000))

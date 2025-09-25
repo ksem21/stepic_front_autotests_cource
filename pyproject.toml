@@ -3,3 +3,8 @@
 
 [tool.pytest.ini_options]
 addopts = ["-v", "--tb=short"] #-v (verbose — подробный вывод) - подробный вывод, --tb=short (traceback — короткие сообщения об ошибках)
+
+markers = """
+lesson1: marker for first lesson
+lesson2: marker for second lesson
+"""
