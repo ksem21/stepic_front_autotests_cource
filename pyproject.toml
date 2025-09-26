@@ -2,10 +2,16 @@
 
 
 [tool.pytest.ini_options]
-addopts = ["-v", "--tb=short"] #-v (verbose — подробный вывод) - подробный вывод, --tb=short (traceback — короткие сообщения об ошибках)
+#-v (verbose — подробный вывод) - подробный вывод, --tb=short (traceback — короткие сообщения об ошибках), --reruns 2 - будет две попытки перепрогона теста если он упал
+addopts = """
+    -v
+    --tb=short
+    --reruns 2
+ """
+
 
 markers = """
-lesson1: marker for first lesson
-lesson2: marker for second lesson
-lesson3: marker for third lesson
+    lesson1: marker for first lesson
+    lesson2: marker for second lesson
+    lesson3: marker for third lesson
 """
