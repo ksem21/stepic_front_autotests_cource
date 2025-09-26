@@ -4,10 +4,11 @@ import time
 import pytest
 
 @pytest.mark.lesson1
-def test_lesson1_1_step4(browser):
+def test_lesson1_1_step4(browser_chrome):
     link = "http://suninjuly.github.io/simple_form_find_task.html"
 
     try:
+        browser = browser_chrome
         browser.get(link)
 
         input1 = browser.find_element(By.TAG_NAME, "input")

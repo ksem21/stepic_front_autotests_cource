@@ -6,7 +6,8 @@ import pytest
 
 
 @pytest.mark.lesson2
-def test_lesson2_2_step6(browser):
+def test_lesson2_2_step6(browser_chrome):
+    browser = browser_chrome
     browser.implicitly_wait(5)
 
     def calc(x):

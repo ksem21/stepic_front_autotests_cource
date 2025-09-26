@@ -6,7 +6,8 @@ import pytest
 
 
 @pytest.mark.lesson2
-def test_lesson2_3_step4(browser):
+def test_lesson2_3_step4(browser_chrome):
+    browser = browser_chrome
     browser.implicitly_wait(5)
 
     browser.get("https://suninjuly.github.io/alert_accept.html")

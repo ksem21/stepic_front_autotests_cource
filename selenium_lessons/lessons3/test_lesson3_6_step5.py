@@ -15,13 +15,13 @@ import math
                                   "https://stepik.org/lesson/236899/step/1", "https://stepik.org/lesson/236903/step/1",
                                   "https://stepik.org/lesson/236904/step/1",
                                   "https://stepik.org/lesson/236905/step/1"])
-def test_lessom3_6_step4(browser, link):
+def test_lessom3_6_step4(browser_for_lesson3_6_step4, link):
+    browser = browser_for_lesson3_6_step4
     browser.get(link)
-    browser.implicitly_wait(5)
 
     # 1. Находим кнопку авторизации и нажимаем
-    auth_button = browser.find_element(By.XPATH,
-                                       "//a[@class='ember-view navbar__auth navbar__auth_login st-link st-link_style_button']")
+    auth_button = WebDriverWait(browser, 10).until(EC.visibility_of_element_located((By.XPATH,
+                                                                                     "//a[@class='ember-view navbar__auth navbar__auth_login st-link st-link_style_button']")))
     auth_button.click()
 
     # 2. Находим поле логина и вводим данные
@@ -41,10 +41,10 @@ def test_lessom3_6_step4(browser, link):
         EC.visibility_of_element_located((By.XPATH, "//img[@class='navbar__profile-img']")))
 
     # 6. Считаем ответ
-    answer = math.log(int(time.time()))
+    answer = str(math.log(int(time.time())))
     # 7. Находим поле ввода для ответа и вводим данные
-    input_area_for_answer = browser.find_element(By.XPATH,
-                                                 "//textarea[@class='ember-text-area ember-view textarea string-quiz__textarea']")
+    input_area_for_answer = WebDriverWait(browser, 10).until(EC.visibility_of_element_located((By.XPATH,
+                                                                                               "//textarea[@placeholder='Напишите ваш ответ здесь...']")))
     input_area_for_answer.send_keys(answer)
 
     # 8. Находим кнопку "Отправить" и ждем пока она будет кликабельной

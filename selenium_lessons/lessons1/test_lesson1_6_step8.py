@@ -5,10 +5,11 @@ import pytest
 
 @pytest.mark.lesson1
 
-def test_lesson1_1_step8(browser):
+def test_lesson1_1_step8(browser_chrome):
     link = "http://suninjuly.github.io/find_xpath_form"
 
     try:
+        browser = browser_chrome
         browser.get(link)
 
         input1 = browser.find_element(By.TAG_NAME, "input")

@@ -6,8 +6,9 @@ import pytest
 
 @pytest.mark.lesson1
 @pytest.mark.xfail(reason="Тест проверяет уникальность локаторов и должен падать")
-def test_lesson1_1_step11(browser):
+def test_lesson1_1_step11(browser_chrome):
     try:
+        browser = browser_chrome
         link = "https://suninjuly.github.io/registration2.html"
         browser.implicitly_wait(5)
         browser.get(link)

@@ -6,10 +6,11 @@ import pytest
 
 @pytest.mark.lesson1
 
-def test_lesson1_1_step5(browser):
+def test_lesson1_1_step5(browser_chrome):
     a = str(math.ceil(math.pow(math.pi, math.e) * 10000))
 
     try:
+        browser = browser_chrome
         browser.get("http://suninjuly.github.io/find_link_text")
 
         secret_link = browser.find_element(By.LINK_TEXT, a)

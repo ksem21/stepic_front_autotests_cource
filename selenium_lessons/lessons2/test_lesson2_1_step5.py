@@ -6,12 +6,12 @@ import pytest
 
 
 @pytest.mark.lesson2
-def test_lesson2_1_step5(browser):
+def test_lesson2_1_step5(browser_chrome):
     def calc(x):
         return str(math.log(abs(12 * math.sin(int(x)))))
 
+    browser = browser_chrome
     browser.implicitly_wait(5)
-
     browser.get("https://suninjuly.github.io/math.html")
     selector_value = browser.find_element(By.XPATH, "//span[@class='nowrap'][@id='input_value']")
     print('Значение селектора', selector_value)

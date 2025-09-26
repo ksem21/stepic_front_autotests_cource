@@ -6,8 +6,9 @@ import pytest
 
 @pytest.mark.lesson1
 
-def test_lesson1_1_step10(browser):
+def test_lesson1_1_step10(browser_chrome):
     try:
+        browser = browser_chrome
         link = "http://suninjuly.github.io/registration1.html"
         browser.get(link)
 

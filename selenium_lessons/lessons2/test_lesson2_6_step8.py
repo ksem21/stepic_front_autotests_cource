@@ -8,7 +8,8 @@ from selenium.webdriver.support import expected_conditions
 import math
 
 @pytest.mark.lesson2
-def test_lesson2_6_step8(browser):
+def test_lesson2_6_step8(browser_chrome):
+    browser = browser_chrome
     browser.implicitly_wait(5)
 
     browser.get("http://suninjuly.github.io/explicit_wait2.html")

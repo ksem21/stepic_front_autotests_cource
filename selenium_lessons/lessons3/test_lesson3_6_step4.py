@@ -7,7 +7,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 @pytest.mark.lesson3
-def test_lessom3_6_step4(browser):
+def test_lessom3_6_step4(browser_chrome):
+    browser = browser_chrome
     browser.get("https://stepik.org/lesson/236895/step/1")
     browser.implicitly_wait(5)
 

@@ -5,8 +5,9 @@ import pytest
 
 
 @pytest.mark.lesson1
-def test_lesson1_1_step7(browser):
+def test_lesson1_1_step7(browser_chrome):
     try:
+        browser = browser_chrome
         browser.get("http://suninjuly.github.io/huge_form.html")
         elements = browser.find_elements(By.CSS_SELECTOR, "input")
         for element in elements:
