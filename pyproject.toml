@@ -6,7 +6,6 @@
 addopts = """
     -v
     --tb=short
-    --reruns 2
  """
 
 
