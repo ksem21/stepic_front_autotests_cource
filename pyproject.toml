@@ -6,6 +6,7 @@
 addopts = """
     -v
     --tb=short
+    -s
  """
 
 

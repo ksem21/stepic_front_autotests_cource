@@ -8,3 +8,7 @@ class MainPageLocators():
 class LoginPageLocators():
     LOGIN_FORM = (By.XPATH, "//form[@id='login_form']")
     REGISTRATION_FORM = (By.XPATH, "//form[@id='register_form']")
+
+
+class ProductPageLocators():
+    ADD_BTN = (By.XPATH, "//button[@value='Добавить в корзину']")
