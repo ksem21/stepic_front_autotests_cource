@@ -24,3 +24,13 @@ class ProductPage(BasePage):
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
+
+    def check_name_product(self):
+        name_of_product = self.browser.find_element(*ProductPageLocators.NAME_OF_PRODUCT).text
+        name_of_product_in_cart = self.browser.find_element(*ProductPageLocators.NAME_OF_PRODUCT_IN_CART).text
+        assert name_of_product in name_of_product_in_cart, f"ОР: Добавлен товар '{name_of_product}', ФР: Добавлен товар '{name_of_product_in_cart}'"
+
+    def check_sum_cart(self):
+        cost_of_product = self.browser.find_element(*ProductPageLocators.COST_OF_PRODUCT).text
+        total_cost_of_cart = self.browser.find_element(*ProductPageLocators.TOTAL_COST_OF_CART).text
+        assert cost_of_product in total_cost_of_cart, f"ОР: Стоимость корзины '{cost_of_product}', ФР: Стоимость корзины '{total_cost_of_cart}'"
