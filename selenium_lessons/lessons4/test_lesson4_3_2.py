@@ -1,5 +1,3 @@
-import time
-
 from selenium_lessons.pages.product_page import ProductPage
 
 

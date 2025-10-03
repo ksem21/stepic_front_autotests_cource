@@ -28,7 +28,7 @@ class ProductPage(BasePage):
     def check_name_product(self):
         name_of_product = self.browser.find_element(*ProductPageLocators.NAME_OF_PRODUCT).text
         name_of_product_in_cart = self.browser.find_element(*ProductPageLocators.NAME_OF_PRODUCT_IN_CART).text
-        assert name_of_product in name_of_product_in_cart, f"ОР: Добавлен товар '{name_of_product}', ФР: Добавлен товар '{name_of_product_in_cart}'"
+        assert name_of_product == name_of_product_in_cart, f"ОР: Добавлен товар '{name_of_product}', ФР: Добавлен товар '{name_of_product_in_cart}'"
 
     def check_sum_cart(self):
         cost_of_product = self.browser.find_element(*ProductPageLocators.COST_OF_PRODUCT).text
