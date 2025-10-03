@@ -33,4 +33,4 @@ class ProductPage(BasePage):
     def check_sum_cart(self):
         cost_of_product = self.browser.find_element(*ProductPageLocators.COST_OF_PRODUCT).text
         total_cost_of_cart = self.browser.find_element(*ProductPageLocators.TOTAL_COST_OF_CART).text
-        assert cost_of_product in total_cost_of_cart, f"ОР: Стоимость корзины '{cost_of_product}', ФР: Стоимость корзины '{total_cost_of_cart}'"
+        assert cost_of_product == total_cost_of_cart, f"ОР: Стоимость корзины '{cost_of_product}', ФР: Стоимость корзины '{total_cost_of_cart}'"
