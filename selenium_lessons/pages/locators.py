@@ -1,10 +1,6 @@
 from selenium.webdriver.common.by import By
 
 
-class MainPageLocators():
-    LOGIN_LINK = (By.XPATH, "//a[@id='registration_link']")
-
-
 class LoginPageLocators():
     LOGIN_FORM = (By.XPATH, "//form[@id='login_form']")
     REGISTRATION_FORM = (By.XPATH, "//form[@id='register_form']")
@@ -17,3 +13,7 @@ class ProductPageLocators():
     COST_OF_PRODUCT = (By.XPATH, "//p[@class='price_color']")
     TOTAL_COST_OF_CART = (By.XPATH, "//div[@class='alertinner ']/p/strong")
     SUCCESS_MESSAGE = (By.XPATH, "//div[@id='messages']//div[1]//div[1]")
+
+
+class BasePageLocators():
+    LOGIN_LINK = (By.XPATH, "//a[@id='login_link']")
