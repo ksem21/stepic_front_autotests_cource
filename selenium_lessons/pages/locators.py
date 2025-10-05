@@ -17,3 +17,8 @@ class ProductPageLocators():
 
 class BasePageLocators():
     LOGIN_LINK = (By.XPATH, "//a[@id='login_link']")
+    CART_BUTTON = (By.XPATH, "//a[@class='btn btn-default']")
+
+class BasketLocators():
+    BASKET_ITEMS = (By.XPATH, "//div[@class='basket-items']")
+    EMPTY_CART_PHRASE = (By.XPATH, "//p[contains(text(),'Ваша корзина пуста')]")

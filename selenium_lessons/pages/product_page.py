@@ -36,19 +36,3 @@ class ProductPage(BasePage):
         cost_of_product = self.browser.find_element(*ProductPageLocators.COST_OF_PRODUCT).text
         total_cost_of_cart = self.browser.find_element(*ProductPageLocators.TOTAL_COST_OF_CART).text
         assert cost_of_product == total_cost_of_cart, f"ОР: Стоимость корзины '{cost_of_product}', ФР: Стоимость корзины '{total_cost_of_cart}'"
-
-    def is_not_element_present(self, how, what, timeout=4):
-        try:
-            WebDriverWait(self.browser, timeout).until(presence_of_element_located((how, what)))
-        except TimeoutException:
-            return True
-
-        return False
-
-    def is_disappeared(self, how, what, timeout=4):
-        try:
-            WebDriverWait(self.browser, timeout, 1, [TimeoutException]).until_not(
-                presence_of_element_located((how, what)))
-        except TimeoutException:
-            return False
-        return True
