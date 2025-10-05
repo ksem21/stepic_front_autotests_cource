@@ -4,6 +4,8 @@ from selenium.common import NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium_lessons.pages.login_page import LoginPage
+import time
 
 
 @pytest.fixture()
@@ -27,3 +29,14 @@ def browser_for_lesson3_6_step4():
         pass
     finally:
         browser.quit()
+
+
+@pytest.fixture()
+def register_user(browser_chrome):
+    link = "http://selenium1py.pythonanywhere.com/ru/accounts/login/"
+    page = LoginPage(browser_chrome, link)
+    page.open()
+    email = str(time.time()) + "@fakemail.org"
+    password = "pisun123456"
+    page.register_new_user(email, password)
+    return browser_chrome

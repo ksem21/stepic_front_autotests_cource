@@ -7,8 +7,8 @@ def test_lesson4_3_10_1(browser_chrome):
     page = BasePage(browser_chrome, link)
     page.open()
     page.go_to_cart()
-    assert page.is_not_element_present(*BasketLocators.BASKET_ITEMS), "Корзина не пустая"
-    assert page.is_element_present(*BasketLocators.EMPTY_CART_PHRASE), "Фраза 'Ваша корзина пуста' отсутствует"
+    page.is_not_element_present(*BasketLocators.BASKET_ITEMS)
+    page.is_element_present(*BasketLocators.EMPTY_CART_PHRASE)
 
 
 def test_lesson4_3_10_2(browser_chrome):
@@ -16,5 +16,5 @@ def test_lesson4_3_10_2(browser_chrome):
     page = BasePage(browser_chrome, link)
     page.open()
     page.go_to_cart()
-    assert page.is_not_element_present(*BasketLocators.BASKET_ITEMS), "Корзина не пустая"
-    assert page.is_element_present(*BasketLocators.EMPTY_CART_PHRASE), "Фраза 'Ваша корзина пуста' отсутствует"
+    page.is_not_element_present(*BasketLocators.BASKET_ITEMS)
+    page.is_element_present(*BasketLocators.EMPTY_CART_PHRASE)

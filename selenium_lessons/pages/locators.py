@@ -4,7 +4,10 @@ from selenium.webdriver.common.by import By
 class LoginPageLocators():
     LOGIN_FORM = (By.XPATH, "//form[@id='login_form']")
     REGISTRATION_FORM = (By.XPATH, "//form[@id='register_form']")
-
+    EMAIL_REGISTRATION_FIELD = (By.XPATH, "//input[@type='email'][@name='registration-email']")
+    PASSWORD_REGISTRATION_FIELD = (By.XPATH, "//input[@type='password'][@name='registration-password1']")
+    REPEAT_PASSWORD_REGISTRATION_FIELD = (By.XPATH, "//input[@type='password'][@name='registration-password2']")
+    REGISTRATION_BUTTON = (By.XPATH, "//button[@name='registration_submit']")
 
 class ProductPageLocators():
     ADD_BTN = (By.XPATH, "//button[@value='Добавить в корзину']")
@@ -18,6 +21,8 @@ class ProductPageLocators():
 class BasePageLocators():
     LOGIN_LINK = (By.XPATH, "//a[@id='login_link']")
     CART_BUTTON = (By.XPATH, "//a[@class='btn btn-default']")
+    LOGIN_IMAGE = (By.XPATH, "//i[@class='icon-user']")
+
 
 class BasketLocators():
     BASKET_ITEMS = (By.XPATH, "//div[@class='basket-items']")
